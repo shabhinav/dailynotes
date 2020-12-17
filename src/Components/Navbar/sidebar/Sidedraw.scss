@@ -1,0 +1,43 @@
+@mixin sidebarlinkstyling {
+  display: flex;
+  align-items: center;
+  padding: 25px 0px;
+  font-weight: 900;
+  color: white;
+  background-color: #3498db;
+  cursor: pointer;
+  padding-left: 25px;
+}
+
+.side-drawer {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  z-index: 2;
+  background-color: white;
+  transition: transform 0.3s ease-out;
+
+  span {
+    padding: 5px;
+  }
+}
+.side-drawer.open {
+  transform: translateX(0);
+}
+
+.newNote {
+  @include sidebarlinkstyling();
+  margin-bottom: 5px;
+  margin-top: 35px;
+}
+
+.viewAllNote {
+  @include sidebarlinkstyling();
+}
+
+.sidedrawer_header {
+  height: 65px;
+  background-color: #ea4935;
+}

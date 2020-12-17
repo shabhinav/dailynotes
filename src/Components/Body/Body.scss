@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+@mixin placeholderstyling {
+  color: grey;
+  font-family: "Lobster", cursive;
+  text-transform: capitalize;
+}
+
+.body {
+  .inner_body {
+    text-align: center;
+    margin: auto;
+    width: 60%;
+    height: 90vh;
+    padding-top: 50px;
+  }
+  .body_saving {
+    text-align: right;
+    font-style: italic;
+    color: lightblue;
+  }
+  .body_currentDate {
+    text-align: right;
+    margin-right: 15px;
+  }
+  .bodyTitle_inputfield {
+    width: 65%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px dashed lightgray;
+    outline: none;
+    text-align: center;
+    @include placeholderstyling();
+    font-size: 30px;
+    ::-webkit-input-placeholder {
+      @include placeholderstyling();
+      font-size: 30px;
+    }
+  }
+  .bodyTextArea_container {
+    ::-webkit-input-placeholder {
+      @include placeholderstyling();
+      font-size: 20px;
+    }
+    .body_textArea {
+      border: none;
+      width: 100%;
+      outline: none;
+      resize: none;
+      @include placeholderstyling();
+      font-size: 20px;
+    }
+  }
+
+  .MuiInputBase-root {
+    justify-content: flex-end;
+  }
+  .MuiInputBase-input {
+    width: 40% !important;
+  }
+  .MuiIconButton-root {
+    padding: 12px 0px !important;
+    outline: none !important;
+  }
+  .MuiIconButton-root:hover {
+    background-color: transparent !important;
+  }
+  .MuiInput-underline:before {
+    border: none !important;
+  }
+  .MuiInput-underline:after {
+    border: none !important;
+  }
+  .MuiInputBase-input:focus {
+    outline: none !important;
+  }
+}
